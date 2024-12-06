@@ -1,3 +1,6 @@
+import "@mantine/core/styles.css";
+import { MantineProvider, Container } from "@mantine/core";
+
 import "./App.css";
 import Navbar from "./components/Navbar";
 import { Outlet } from "react-router-dom";
@@ -5,10 +8,12 @@ import { Outlet } from "react-router-dom";
 function App() {
   return (
     <>
-      <Navbar />
-      <main className="main-content">
-        <Outlet />
-      </main>
+      <MantineProvider>
+        <Navbar />
+        <Container>
+          <Outlet />
+        </Container>
+      </MantineProvider>
     </>
   );
 }
