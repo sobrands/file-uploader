@@ -15,7 +15,11 @@ const Navbar = () => {
   return (
     <Container size={{ base: "xs", sm: "lg" }}>
       <Group justify="space-between">
-        <h1>File Uploader</h1>
+        <h1>
+          <Link to="/" style={{ textDecoration: "none", color: "black" }}>
+            File Uploader
+          </Link>
+        </h1>
         <Link to="/log-in">
           <Button visibleFrom="sm" variant="default">
             Log In
@@ -27,7 +31,11 @@ const Navbar = () => {
         <Container>
           <Paper withBorder p="md" radius="md" shadow="xs">
             <Stack align="stretch">
-              <Link to="/log-in" style={{ textDecoration: "none" }}>
+              <Link
+                to="/log-in"
+                style={{ textDecoration: "none" }}
+                onClick={toggle}
+              >
                 <Button variant="white" fullWidth color="black">
                   Log In
                 </Button>
