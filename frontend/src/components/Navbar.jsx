@@ -16,18 +16,22 @@ const Navbar = () => {
     <Container size={{ base: "xs", sm: "lg" }}>
       <Group justify="space-between">
         <h1>
-          <Link to="/" style={{ textDecoration: "none", color: "black" }}>
+          <Link
+            to="/"
+            style={{ textDecoration: "none", color: "black" }}
+            onClick={() => (opened ? toggle() : null)}
+          >
             File Uploader
           </Link>
         </h1>
         <Link to="/log-in">
-          <Button visibleFrom="sm" variant="default">
+          <Button visibleFrom="xs" variant="default">
             Log In
           </Button>
         </Link>
-        <Burger hiddenFrom="sm" opened={opened} onClick={toggle} size="sm" />
+        <Burger hiddenFrom="xs" opened={opened} onClick={toggle} size="sm" />
       </Group>
-      <Collapse hiddenFrom="sm" in={opened}>
+      <Collapse hiddenFrom="xs" in={opened}>
         <Container>
           <Paper withBorder p="md" radius="md" shadow="xs">
             <Stack align="stretch">
