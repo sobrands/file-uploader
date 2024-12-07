@@ -4,23 +4,23 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import "./index.css";
 import App from "./App.jsx";
-// import Login from "./pages/Login.jsx";
-// import SignUp from "./pages/SignUp.jsx";
+import Login from "./pages/Login.jsx";
+import SignUp from "./pages/Signup.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-    // children: [
-    //   {
-    //     path: "/log-in",
-    //     element: <Login />,
-    //   },
-    //   {
-    //     path: "/sign-up",
-    //     element: <SignUp />,
-    //   },
-    // ],
+    children: [
+      {
+        path: "/log-in",
+        element: <Login />,
+      },
+      {
+        path: "/sign-up",
+        element: <SignUp />,
+      },
+    ],
   },
 ]);
 
